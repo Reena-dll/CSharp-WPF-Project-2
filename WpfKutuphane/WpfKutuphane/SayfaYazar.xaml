@@ -1,0 +1,64 @@
+﻿<Window x:Class="WpfKutuphane.SayfaYazar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfKutuphane"
+        mc:Ignorable="d"
+        Title="Yazarlar" Height="600" Width="1200" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen"  Loaded="Window_Loaded">
+
+    <Grid Margin="10,0,0,10">
+        <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
+        <Image Source="Assets/wp1850829.jpg" Margin="986,0,0,0" Stretch="UniformToFill"/>
+        <Rectangle Margin="986,0,0,0" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#CC935E12" Offset="1"/>
+                    <GradientStop Color="#CCEA4646"/>
+                    <GradientStop Color="#CCB89128" Offset="0.566"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <StackPanel Margin="20,10,234,40">
+            <Label Content="Yazarlar" FontFamily="Segoe UI Black" FontSize="24" Margin="0,10" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <StackPanel />
+            <DataGrid x:Name="datagrid1" HorizontalAlignment="Left" Height="418" ItemsSource="{Binding}" Margin="10,10,0,0" VerticalAlignment="Top" Width="916" SelectionChanged="datagrid1_SelectionChanged" />
+
+        </StackPanel>
+
+        <Button x:Name="btnEkle" Margin="995,375,110,183" HorizontalAlignment="Center"  Content="Ekle" FontFamily="New Times Roman" FontSize="15" Width="85" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Ekle_Click"/>
+        <Button x:Name="btnGeriGel" Margin="20,543,1102,10" HorizontalAlignment="Center" Content="Geri" FontFamily="New Times Roman" FontSize="15" Width="68" Background="#CCEA4646" BorderBrush="#FF307CD6" Click="btnGeri_Click" Height="Auto"/>
+        <Button x:Name="btnGuncelle" Margin="1085,375,10,183" HorizontalAlignment="Center"  Content="Güncelle" FontFamily="New Times Roman" FontSize="15" Width="95" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Guncelle_Click"/>
+        <Button x:Name="btnSil" Margin="995,428,110,130" HorizontalAlignment="Center"  Content="Sil" FontFamily="New Times Roman" FontSize="15" Width="85" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Sil_Click"/>
+        <Button x:Name="btnTemizle" Margin="1085,428,10,130" HorizontalAlignment="Center"  Content="Temizle" FontFamily="New Times Roman" FontSize="15" Width="95" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Temizle_Click"/>
+        <StackPanel x:Name="a1" HorizontalAlignment="Left" Height="309" Margin="1002,61,0,0" VerticalAlignment="Top" Width="178">
+            <StackPanel Margin="0,2" Orientation="Horizontal">
+                <materialDesign:PackIcon x:Name="IconID" Kind="Password" VerticalAlignment="Center" Foreground="Black"/>
+                <TextBox  x:Name="txtYazarID" materialDesign:HintAssist.Hint="Yazar ID" Width="158" IsEnabled="False" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon x:Name="IconYazar" Kind="Typewriter" VerticalAlignment="Center" Foreground="Black"/>
+                <TextBox x:Name="txtYazar" materialDesign:HintAssist.Hint="Yazar Adı" Width="154" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon x:Name="IconUlke" Kind="Flag" VerticalAlignment="Center" Foreground="Black"/>
+                <TextBox x:Name="txtUlke" materialDesign:HintAssist.Hint="Ülke" Width="154" Margin="5"/>
+            </StackPanel>
+  
+            <StackPanel Orientation="Horizontal" Height="175">
+                <materialDesign:PackIcon x:Name="IconBiyografi" Kind="Biography" VerticalAlignment="top" Foreground="Black" Height="24" Margin="0,17,0,0"/>
+                <RichTextBox x:Name="rchBiyografi" materialDesign:HintAssist.Hint="Biyografi" Width="158" Margin="10,10,10,0"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

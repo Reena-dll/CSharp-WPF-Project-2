@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfKutuphane.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfKutuphane"
+        mc:Ignorable="d"
+         Title="Giriş" Height="400" Width="600" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
+        <Image Source="Assets/wp1850829.jpg" Margin="310,0,0,0" Stretch="UniformToFill"/>
+        <Rectangle Margin="310,0,0,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#CC935E12" Offset="1"/>
+                    <GradientStop Color="#CCEA4646"/>
+                    <GradientStop Color="#CCB89128" Offset="0.566"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <StackPanel Margin="20,10,290,10">
+            <Label Content="Giriş" FontFamily="Segoe UI Black" FontSize="24" Margin="0,10" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#707070"><Run Text="Hesabınız yok mu? "/></TextBlock>
+                <TextBlock  x:Name="txtHesap" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#FF2468AC" PreviewMouseDown="TextBlock_PreviewMouseDown" MouseEnter="TextBlock_MouseEnter" MouseLeave="txtHesap_MouseLeave"><Run Text="Hesap Oluştur"/></TextBlock>
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#707070"><Run Text="1 dakikadan az sürecektir."/></TextBlock>
+            <StackPanel Margin="0,15" Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
+                <TextBox x:Name="txtMail" materialDesign:HintAssist.Hint="Gmail" Width="250" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Foreground="#707070"/>
+                <PasswordBox x:Name="txtSifre" materialDesign:HintAssist.Hint="Şifre" Width="250" Margin="5"/>
+            </StackPanel>
+
+            <Button Margin="95,35,91,35" HorizontalAlignment="Center" Content="Giriş Yap" FontFamily="New Times Roman" FontSize="15" Width="104" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Button_Click"/>
+
+        </StackPanel>
+        <StackPanel Margin="310,50,0,50">
+            <TextBlock Text="Kütüphane" Foreground="White" HorizontalAlignment="Center" FontSize="48" FontFamily="Champagne &amp; Limousines" FontWeight="Bold"/>
+            <TextBlock Text="Kitap okumayan bir kimsenin, okuma bilmeyene karşı bir üstünlüğü yoktur." Foreground="White" HorizontalAlignment="Center" Width="280" FontSize="24" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="0,50,0,0"/>
+            <TextBlock Text="Mark Twain" Foreground="White" FontSize="18" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Right" Margin="10"/>
+        </StackPanel>
+        <Button x:Name="btnCikis" Margin="20,358,512,10" HorizontalAlignment="Center" Content="Çıkış" FontFamily="New Times Roman" FontSize="15" Width="68" Background="#CCEA4646" BorderBrush="#FF307CD6" Click="btnCikis_Click" Height="Auto"/>
+    </Grid>
+</Window>

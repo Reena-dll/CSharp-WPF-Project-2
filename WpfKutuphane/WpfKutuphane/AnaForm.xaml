@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfKutuphane.AnaForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfKutuphane"
+        mc:Ignorable="d"
+       Title="AnaForm" Height="400" Width="600" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen"  Loaded="Window_Loaded">
+
+    <Grid>
+        <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
+        <Image Source="Assets/wp1850829.jpg" Margin="310,0,0,0" Stretch="UniformToFill"/>
+        <Rectangle Margin="310,0,0,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#CC935E12" Offset="1"/>
+                    <GradientStop Color="#CCEA4646"/>
+                    <GradientStop Color="#CCB89128" Offset="0.566"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <StackPanel Margin="20,10,290,10">
+            <Label Content="Ana Sayfa" FontFamily="Segoe UI Black" FontSize="24" Margin="0,10" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <StackPanel >
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="#707070"><Run Text="Kütüphanemize Hoş Geldiniz. "/></TextBlock>
+            </StackPanel>
+
+
+            <Button x:Name="btnKitaplar" Margin="10" HorizontalAlignment="Center" Content="Kitaplar" FontFamily="New Times Roman" FontSize="15" Width="109" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Kitaplar_Click"/>
+            <Button x:Name="btnYazarlar" Margin="10" HorizontalAlignment="Center" Content="Yazarlar" FontFamily="New Times Roman" FontSize="15" Width="109" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Yazarlar_Click"/>
+            <Button x:Name="btnTur" Margin="10" HorizontalAlignment="Center" Content="Türler" FontFamily="New Times Roman" FontSize="15" Width="109" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Turler_Click"/>
+            <Button x:Name="btnKullanici" Margin="10" HorizontalAlignment="Center" Content="Kullanıcılar" FontFamily="New Times Roman" FontSize="15" Width="109" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Kullanicilar_Click"/>
+
+        </StackPanel>
+        <StackPanel Margin="310,50,0,50">
+            <TextBlock Text="Kütüphane" Foreground="White" HorizontalAlignment="Center" FontSize="48" FontFamily="Champagne &amp; Limousines" FontWeight="Bold"/>
+            <TextBlock Text="Kitap, yalnız kalmış adamın dostudur." Foreground="White" HorizontalAlignment="Center" Width="280" FontSize="24" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="0,50,0,0"/>
+            <TextBlock Text="Oğuzhan Sadıkoğlu" Foreground="White" FontSize="18" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Right" Margin="10"/>
+        </StackPanel>
+        <Button x:Name="btnCikis" Margin="20,358,512,10" HorizontalAlignment="Center" Content="Çıkış" FontFamily="New Times Roman" FontSize="15" Width="68" Background="#CCEA4646" BorderBrush="#FF307CD6" Click="btnCikis_Click" Height="Auto"/>
+    </Grid>
+</Window>

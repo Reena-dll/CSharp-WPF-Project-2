@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="26ed257279df4f269309eb66e32b0903" Name="Diagram1">
+        <EntityTypeShape EntityType="LibraryModel.Hareketler" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Kitaplar" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.KitapTur" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Kullanicilar" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.KullaniciRol" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryModel.Yazarlar" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <AssociationConnector Association="LibraryModel.FK_Hareketler_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Hareketler_Kullanicilar1" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Kitaplar_KitapTur" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Kitaplar_Yazarlar" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryModel.FK_Kullanicilar_KullaniciRol" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

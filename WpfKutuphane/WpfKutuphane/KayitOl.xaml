@@ -1,0 +1,67 @@
+﻿<Window x:Class="WpfKutuphane.KayitOl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfKutuphane"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Kayıt Ol"
+        Loaded="Window_Loaded"
+        Height="400" Width="600" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Rectangle RadiusY="8" RadiusX="8" Fill="White"/>
+        <Image Source="Assets/wp1850829.jpg" Margin="310,0,0,0" Stretch="UniformToFill"/>
+        <Rectangle Margin="310,0,0,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#CC935E12" Offset="1"/>
+                    <GradientStop Color="#CCEA4646"/>
+                    <GradientStop Color="#CCB89128" Offset="0.566"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <StackPanel Margin="20,10,290,10">
+            <Label Content="Kayıt Ol" FontFamily="Segoe UI Black" FontSize="24" Margin="0,10" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <StackPanel Margin="0,2" Orientation="Horizontal">
+                <materialDesign:PackIcon x:Name="IconUser" Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
+                <TextBox  x:Name="txtAd" materialDesign:HintAssist.Hint="Adınız" Width="250" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon x:Name="IconUser2" Kind="Account" VerticalAlignment="Center" Foreground="#707070"/>
+                <TextBox x:Name="txtSoyad" materialDesign:HintAssist.Hint="Soyadınız" Width="250" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon x:Name="IconTel" Kind="Telephone" VerticalAlignment="Center" Foreground="#707070"/>
+                <TextBox x:Name="txtTelefon" materialDesign:HintAssist.Hint="Telefon" Width="250" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon x:Name="IconHome" Kind="Home" VerticalAlignment="Center" Foreground="#707070"/>
+                <TextBox x:Name="txtAdres" materialDesign:HintAssist.Hint="Adres" Width="250" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon x:Name="IconMail" Kind="Mail" VerticalAlignment="Center" Foreground="#707070"/>
+                <TextBox x:Name="txtMail" materialDesign:HintAssist.Hint="Mail" Width="250" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon x:Name="IconPassword1" Kind="Password" VerticalAlignment="Center" Foreground="#707070"/>
+                <PasswordBox x:Name="txtSifre" materialDesign:HintAssist.Hint="Şifre" Width="250" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon x:Name="IconPassword2" Kind="Password" VerticalAlignment="Center" Foreground="#707070"/>
+                <PasswordBox x:Name="txtSifreTekrar" materialDesign:HintAssist.Hint="Şifre Tekrar" Width="250" Margin="5"/>
+            </StackPanel>
+            
+
+            <Button Margin="10,10,-150,0" HorizontalAlignment="Center" Content="Kayıt Ol" FontFamily="New Times Roman" FontSize="15" Width="104" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Button_Click"/>
+
+        </StackPanel>
+        <StackPanel Margin="310,50,0,50">
+            <TextBlock Text="Kütüphane" Foreground="White" HorizontalAlignment="Center" FontSize="48" FontFamily="Champagne &amp; Limousines" FontWeight="Bold"/>
+            <TextBlock Text="Kitapsız yaşamak; kör, sağır, dilsiz yaşamaktır." Foreground="White" HorizontalAlignment="Center" Width="280" FontSize="24" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Center" Margin="0,50,0,0"/>
+            <TextBlock Text="L. Annaeus Seneca" Foreground="White" FontSize="18" FontFamily="Champagne &amp; Limousines" TextWrapping="Wrap" TextAlignment="Right" Margin="10"/>
+        </StackPanel>
+        <Button x:Name="btnGeriGel" Margin="20,358,512,10" HorizontalAlignment="Center" Content="Geri" FontFamily="New Times Roman" FontSize="15" Width="68" Background="#CCEA4646" BorderBrush="#FF307CD6" Click="btnGeri_Click" Height="Auto"/>
+    </Grid>
+</Window>
